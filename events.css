@@ -1,0 +1,281 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('gear b.jpg!sw800') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(196, 32, 32, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-logo {
+  position: absolute;
+  top: 0;
+  left: 20px; /* Adjust as needed */
+}
+.nav-logo {
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.collegee-logo {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+  display: block;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-left: auto; /* Aligns the buttons to the right */
+}
+.nav-logo {
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+
+
+
+.nav-links button {
+  background: #444;
+  color: #fff;
+  border: 2px solid #444;
+  padding: 15px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links button:hover {
+  background: #FFD700;
+  color: #333;
+  transform: translateY(-3px);
+}
+
+/* Hover Animation */
+.nav-links button::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-out;
+}
+
+.nav-links button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.main-content {
+  margin: 30px 20px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  flex: 1;
+}
+
+.meqnzo-logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Event List Buttons */
+.event-list button {
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-list button:hover {
+  background: #357ABD;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.event-list button::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-out;
+}
+
+.event-list button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 15px 15px;
+}
+
+.footer-nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.footer-nav ul li a:hover {
+  color: #000;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      z-index: 1;
+      padding: 10px 0;
+  }
+
+  .nav-links button {
+      margin: 10px 0;
+      width: 100%;
+      border-radius: 0;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+}
+.collegee-logo {
+  width: 60px; /* Match the height of the navigation buttons */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+.event-list {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  gap: 15px; /* Space between buttons */
+}
+
+.event-list button {
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  color: white;
+  border: none;
+  padding: 20px 40px; /* Increased padding */
+  font-size: 24px; /* Increased font size */
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-list button:hover {
+  background: #357ABD;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.event-list button::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-out;
+}
+
+.event-list button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}

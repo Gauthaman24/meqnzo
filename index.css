@@ -1,0 +1,392 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('gear b.jpg!sw800') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(196, 32, 32, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+.nav-button {
+  padding: 20px 50px; /* Increased padding for larger button size */
+  font-size: 24px; /* Increased font size */
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 30px;
+}
+.nav-logo{
+  margin-top: 10px;
+}
+
+
+.nav-links button {
+  /* Existing styles */
+  background: #444;
+  color: #fff;
+  border: 2px solid #444;
+  padding: 20px 50px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  
+  /* Add the new CSS code here */
+  padding: 25px 60px; /* Increased padding for larger button size */
+  font-size: 26px; /* Increased font size */
+  border-radius: 35px; /* Increased border radius for a more rounded shape */
+}
+
+
+.nav-links button:hover {
+  background: #FFD700;
+  color: #333;
+  transform: translateY(-3px);
+}
+
+/* Hover Animation */
+.nav-links button::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-out;
+}
+
+.nav-links button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu Styles */
+.nav-links.show {
+  display: flex;
+}
+
+/* Main Content */
+.main-content {
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
+  
+  max-width: 800px;
+  color: white;
+  text-align: center;
+}
+
+/* Centering and Enlarging the SRM Valliammai Image */
+.logo-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Text Styling */
+.main-content h2,
+.main-content h1 {
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.main-content h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* Instagram Logo */
+.instagram-logo {
+  width: 40px;
+  height: auto;
+  margin-top: 15px;
+  filter: none;
+  transition: transform 0.3s ease;
+  color: #c13584;
+}
+
+
+.instagram-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Button Styles */
+.register-button {
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-button:hover {
+  background: #357ABD;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.register-button::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-out;
+}
+
+.register-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.nati-color {
+  color: white;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 15px 15px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+  }
+  .nav-links button {
+      margin-bottom: 10px;
+  }
+  .hamburger {
+      display: flex;
+  }
+}
+/* Existing styles */
+
+/* Add the new CSS code at the end of the file */
+.nav-links button {
+  padding: 20px 40px !important; /* Increased padding for larger button size */
+  font-size: 24px !important; /* Increased font size */
+  border-radius: 40px !important; /* Increased border radius for a more rounded shape */
+  margin-right: 20px;
+}
+
+.college-logo {
+    border: none; /* Removes any border */
+    outline: none; /* Removes any outline */
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    background-color: none;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  width: 50%;
+  /* background: #1e1; */
+}
+
+.socials a {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in-out 0.3s;
+}
+.socials a:hover {
+  background: #FFD700;
+}
+
+.socials img {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.socials {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  margin: 1rem;
+  width: 100%; /* Ensures the container takes the full width */
+}
+
+.socials a {
+  display: flex;
+  justify-content: center; /* Centers the icon within the link */
+  align-items: center; /* Centers the icon vertically */
+  width: 2rem;
+  height: 2rem;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0.5rem; /* Adjust margin as needed */
+  padding: 0.5rem; /* Adjust padding as needed */
+  transition: background 0.3s ease-in-out;
+}
+
+.socials a:hover {
+  background: #FFD700; /* Change background on hover */
+}
+
+.socials img {
+  width: 1.5rem; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  flex-direction: column;
+   /* Align items to the right */
+}
+
+/* Footer Navigation */
+.footer-nav {
+  display: flex;
+  gap: 20px; /* Space between links, adjust to your spacing preference */
+  margin-bottom: 10px; /* Space below the navigation links */
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-nav a:hover {
+  color: #FFD700; /* Hover color */
+}
+
+/* Footer Text */
+footer h3 {
+  margin: 0;
+}
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+  justify-content: center; /* Center align items vertically */
+}
+
+/* Footer navigation */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between links */
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-nav a:hover {
+  color: #FFD700; /* Change color on hover */
+}
+
+/* Instagram Logo */
+.instagram-logo {
+  width: 40px;
+  height: auto;
+  margin: 20px 0; /* Margin to separate from other items */
+  transition: transform 0.3s ease;
+}
+
+.instagram-logo:hover {
+  transform: scale(1.1);
+}
+.main-content {
+  margin: 10px; /* Adjust for mobile */
+  padding: 15px;
+}
+
+.event-list button {
+  padding: 10px 20px; /* Adjust button size for mobile */
+  font-size: 16px; /* Adjust font size for mobile */
+}.college-logo, .instagram-logo {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.dep{
+  color: white;
+}
